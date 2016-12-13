@@ -11,20 +11,18 @@
 
 		}
 
-		/*
-		错误写法  show undefined
 		Proxy.prototype.show = function(){
 			console.log("this is traget");
-		}*/
+		}
 
-		Proxy.prototype = {
+		/*Proxy.prototype = {
 			show:function(){
 				console.log("i am showing");
 			},
 			sing:function(){
 				console.log("i am sing");
 			}
-		}
+		}*/
 
 		var p1 = new Proxy();
 		var p2 = new Proxy();
