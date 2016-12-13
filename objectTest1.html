@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>O_O</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+
+		//构造函数
+		function Person(name,age,sex){
+			this.name = name;
+			this.age = age;
+			this.sex = sex;
+			this.sayName = function(){
+				console.log("Name:"+this.name);
+			}
+		}
+
+		function Person3(name,age,sex){
+			this.name = name;
+			this.age = age;
+			this.sex = sex;
+			this.sayName = new Function(console.log("Name:"+this.name));s
+		}
+
+		//这样创建的时候 person1、person2里面的sayName方法的构造函数又不一样，创建多个的时候有多个,上面两个对象 逻辑上一样
+		var person1 = new Person("jerry","20","w");
+		var person2 = new Person("jane","22","M");
+
+		console.log("构造函数对象",person1.constructor == Person);
+		console.log("检验类型方法1", person1 instanceof Object);
+		console.log("检验类型方法2", person1 instanceof Person);
+		
+
+	</script>
+</body>
+</html>
