@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script src="./lib/jquery-2.2.4.js"></script>
+	<script type="text/javascript">
+//所有的Jquery代理对象的实例，都是扩展自$.fn对象的
+
+//所有Jquery的方法都是通过扩展$.fn对象，所有的实例对象即可拥有	
+
+	var $body = $(document.body);
+	console.log($body);
+	//$body为jQuery的实例，$.fn是jQuery的原型对象   说明实例的方法都是继承自原型对象的
+	console.log($.fn.addClass === $body.addClass);
+	//原型上添加一个方法
+	$.fn.abc = function(){
+		console.log("this is function abc");
+	}
+	$body.abc();//可以调用  
+	
+</script>
+</body>
+</html>
