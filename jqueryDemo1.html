@@ -3,11 +3,23 @@
 <html>
 <head>
 	<title></title>
+	<meta charset="utf-8">
 </head>
 <body>
+	<div id="gw_list" class="gw_list"></div>
+	<script src="./lib/jquery-2.2.4.js"></script>
 	<script src="./gwq-plug/list_plug.js"></script>
 	<script type="text/javascript">
 
+		$(".gw_list").gwchart({
+			data : ["你","我","它","他"]
+		});
+
+		//面向对象方式
+		new gwchart({
+			dom : "gw_list",
+			data : ["哈士奇","萨摩耶","拉布拉多","中华田园犬"]
+		})
 	</script>
 </body>
 </html>
