@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MyJquery</title>
+</head>
+<body>
+	<div class="d1">第1个</div>
+	<div class="d1">第2个</div>
+	<div class="d1">第3个</div>
+	<script src="./gwq-plug/gwJquery.js"></script>
+	<script type="text/javascript">
+		var test = $gw(".d1");
+		//console.log($gw(".d1").length);
+		
+		/*test.each(function(index,obj){
+			console.log(index);
+			console.log(obj);
+		})*/
+
+		test.addClass("d2 d3");
+
+		test.removeClass("d3");
+	</script>
+</body>
+</html>

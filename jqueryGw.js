@@ -38,4 +38,12 @@ $shili.cry();
 //首字母为大写的函数 是构造器函数 创建函数实在堆里面
 //所有的构造器函数 在堆中都有一个自己的原型对象
 
+$.extend = function(traget){
+	for(var i=1;i<arguments.length;i++){
+		for(var p in arguments[i]){
+			traget[p] = arguments[i][p];
+		}
+	}
+}
+
 
